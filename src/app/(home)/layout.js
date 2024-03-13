@@ -1,13 +1,24 @@
-import React from 'react';
+import './styles.css'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
-import './styles.css';
-
-function HomeLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+export const metadata = {
+	title: 'Famous Author',
+	description: 'All about insert name here',
 }
 
-export default HomeLayout;
+function HomeLayout({ children }) {
+	return (
+		<html lang='en'>
+			<body>
+				<header>
+					<NavBar />
+				</header>
+				{children}
+				<Footer />
+			</body>
+		</html>
+	)
+}
+
+export default HomeLayout
