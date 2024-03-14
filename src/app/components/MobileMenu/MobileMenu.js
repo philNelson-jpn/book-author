@@ -21,44 +21,76 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 					</CloseButton>
 					<Filler />
 					<Nav>
-						<NavLink className={styles.navLink} href='/'>
+						<NavLink onClick={onDismiss} className={styles.navLink} href='/'>
 							Home
 						</NavLink>
-						<NavLink className={styles.navLink} href='/books'>
+						<NavLink
+							onClick={onDismiss}
+							className={styles.navLink}
+							href='/books'
+						>
 							Books
 						</NavLink>
-						<NavLink className={styles.navLink} href='/alphonso-mayo-project'>
+						<NavLink
+							onClick={onDismiss}
+							className={styles.navLink}
+							href='/alphonso-mayo-project'
+						>
 							Alphonso Mayo Project
 						</NavLink>
-						<NavLink className={styles.navLink} href='/tutoring'>
+						<NavLink
+							onClick={onDismiss}
+							className={styles.navLink}
+							href='/tutoring'
+						>
 							Tutoring
 						</NavLink>
-						<NavLink className={styles.navLink} href='/about'>
+						<NavLink
+							onClick={onDismiss}
+							className={styles.navLink}
+							href='/about'
+						>
 							About
 						</NavLink>
 					</Nav>
 					<Footer>
-						<FooterLink target="_blank" href='https://twitter.com/Brian_A_Nelson'>
+						<FooterLink
+							target='_blank'
+							href='https://twitter.com/Brian_A_Nelson'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								viewBox='0 0 24 24'
-								width='24'
-								height='24'
-								class='main-grid-item-icon'
-								fill='none'
+								x='0px'
+								y='0px'
+								width='32'
+								height='32'
+								viewBox='4 4 40 40'
 							>
+								<polygon
+									fill='#616161'
+									points='41,6 9.929,42 6.215,42 37.287,6'
+								></polygon>
+								<polygon
+									fill='#fff'
+									fill-rule='evenodd'
+									points='31.143,41 7.82,7 16.777,7 40.1,41'
+									clip-rule='evenodd'
+								></polygon>
 								<path
-									d='M7.548 21.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.02 10.02 0 0 0 24 4.305a9.815 9.815 0 0 1-2.828.775 4.94 4.94 0 0 0 2.165-2.723 9.865 9.865 0 0 1-3.127 1.195 4.929 4.929 0 0 0-8.391 4.491A13.98 13.98 0 0 1 1.67 2.898a4.928 4.928 0 0 0 1.525 6.573A4.88 4.88 0 0 1 .96 8.855v.063a4.926 4.926 0 0 0 3.95 4.826 4.914 4.914 0 0 1-2.223.085 4.93 4.93 0 0 0 4.6 3.42A9.88 9.88 0 0 1 0 19.288a13.941 13.941 0 0 0 7.548 2.208'
-									fill='#1DA1F2'
-								/>
+									fill='#616161'
+									d='M15.724,9l20.578,30h-4.106L11.618,9H15.724 M17.304,6H5.922l24.694,36h11.382L17.304,6L17.304,6z'
+								></path>
 							</svg>
 						</FooterLink>
-						<FooterLink target="_blank" href='https://www.facebook.com/BrianNelsonTheAuthor/'>
+						<FooterLink
+							target='_blank'
+							href='https://www.facebook.com/BrianNelsonTheAuthor/'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
-								width='24'
-								height='24'
+								width='32'
+								height='32'
 								class='main-grid-item-icon'
 								fill='none'
 							>
@@ -68,12 +100,15 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 								/>
 							</svg>
 						</FooterLink>
-						<FooterLink target="_blank" href='https://www.linkedin.com/in/briannelsonauthor'>
+						<FooterLink
+							target='_blank'
+							href='https://www.linkedin.com/in/briannelsonauthor'
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
-								width='24'
-								height='24'
+								width='32'
+								height='32'
 								class='main-grid-item-icon'
 								fill='none'
 							>
@@ -170,10 +205,6 @@ const NavLink = styled(Link)`
 	text-transform: uppercase;
 	font-size: 1.325rem;
 
-	&:first-of-type {
-		color: var(--color-secondary);
-	}
-
 	--nav-fade: ${FadeIn} 600ms both, ${SlideIn} 300ms both;
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -217,7 +248,11 @@ const Footer = styled.footer`
 	gap: calc(38 / 16 * 1rem);
 `
 
-const FooterLink = styled.a``
+const FooterLink = styled.a`
+	border: 2px solid transparent;
+	border-radius: 4px;
+	padding: 12px;
+`
 
 const Filler = styled.div`
 	flex: 1;
