@@ -1,5 +1,5 @@
 import './styles.css'
-import NavBar from '../components/NavBar'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export const metadata = {
@@ -11,9 +11,8 @@ function HomeLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body>
-				<header>
-					<NavBar />
-				</header>
+				<Header />
+
 				{children}
 				<Footer />
 			</body>
