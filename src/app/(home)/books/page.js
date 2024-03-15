@@ -1,5 +1,3 @@
-import books from '/Users/user/book-author-site/src/app/books.json'
-
 function Books() {
 	return (
 		<>

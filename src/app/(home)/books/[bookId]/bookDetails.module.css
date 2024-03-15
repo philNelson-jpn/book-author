@@ -1,0 +1,22 @@
+.bookInfoWrapper {
+    max-width: 80ch;
+    margin-inline: auto;
+}
+
+.paragraph {
+    margin-block-end: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 59.375rem) {
+    .bookInfoWrapper {
+        padding-inline: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {
+    .bookInfoWrapper {
+        padding-inline: 1rem;
+    }
+}

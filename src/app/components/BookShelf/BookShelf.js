@@ -4,7 +4,7 @@ import React from 'react'
 import style from './BookShelf.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import books from '/Users/user/book-author-site/src/app/books.json'
+import books from '../../books'
 
 const Books = () => {
 	const [bookIndex, setBookIndex] = React.useState(-1)
@@ -50,7 +50,8 @@ const Books = () => {
 				style={{
 					display: 'flex',
 					alignItems: 'center',
-					gap: 4,
+					justifyContent: 'center',
+					gap: 16,
 					width: 'container.xs',
 					overflowX: 'hidden',
 				}}

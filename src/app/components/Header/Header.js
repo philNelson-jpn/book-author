@@ -17,9 +17,6 @@ const Header = () => {
 					<Logo />
 				</div>
 				<nav className={styles.desktopNav}>
-					<Link className={styles.navLink} href='/'>
-						Home
-					</Link>
 					<Link className={styles.navLink} href='/books'>
 						Books
 					</Link>
