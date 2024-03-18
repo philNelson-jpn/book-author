@@ -45,17 +45,7 @@ const Books = () => {
 					</filter>
 				</defs>
 			</svg>
-			<div
-				className={style.flexWrapper}
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					gap: 16,
-					width: 'container.xs',
-					overflowX: 'hidden',
-				}}
-			>
+			<div className={style.flexWrapper}>
 				{books.map((book, index) => (
 					<button
 						key={index}
@@ -88,7 +78,7 @@ const Books = () => {
 							className={style.flex}
 							style={{
 								display: 'flex',
-								alignItems: 'flex-start',
+								alignItems: 'center',
 								justifyContent: 'center',
 								placeItems: 'center',
 								width: spineWidth,
@@ -99,11 +89,13 @@ const Books = () => {
 								color: book.spineForegroundColor,
 								transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(${
 									bookIndex === index ? '-60deg' : '0deg'
-								}) rotateZ(0deg) skew(0deg, 0deg)`,
+								}) rotateZ(0deg) skew(0deg, 0deg) translateY(-3px)`,
 								transition: 'all 500ms ease',
 								willChange: 'auto',
 								filter: 'brightness(0.8) contrast(2)',
 								transformStyle: 'preserve-3d',
+								// without this border the layout breaks on tablet for some reason
+								border: `0.01px solid ${book.spineBackgroundColor}`,
 							}}
 						>
 							<Link
@@ -129,9 +121,11 @@ const Books = () => {
 								style={{
 									as: 'h2',
 									writingMode: 'vertical-lr',
-									fontSize: '24px',
-									fontFamily: `Copperplate, "DM Sans", sans-serif`,
+									fontSize: book.fontSize,
+									fontFamily: book.spineFontFamily,
 									userSelect: 'none',
+									color: book.spineTextColor,
+									textTransform: 'uppercase',
 								}}
 							>
 								{book.title}
@@ -140,13 +134,14 @@ const Books = () => {
 						<div
 							className={style.box}
 							style={{
+								
 								position: 'relative',
 								flexShrink: 0,
 								overflow: 'hidden',
 								transformOrigin: 'left',
-								transform: `${`translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(${
+								transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(${
 									bookIndex === index ? '30deg' : '88.4deg'
-								}) rotateZ(0deg) skew(0deg, 0deg)`}`,
+								}) rotateZ(0deg) skew(0deg, 0deg)`,
 								transition: 'all 500ms ease',
 								willChange: 'auto',
 								filter: 'brightness(0.8) contrast(2)',
@@ -181,6 +176,7 @@ const Books = () => {
 							/>
 
 							<Image
+							className={style.coverImage}
 								src={book.coverUrl}
 								alt={book.title}
 								width={width * 5.5}

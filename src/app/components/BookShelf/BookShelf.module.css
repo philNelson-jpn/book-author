@@ -1,0 +1,17 @@
+.flexWrapper {
+	--spacing: 16px;
+	margin-block-start: var(--spacing);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: clamp(0.5rem, 9.2vw - 2.5rem, 4rem);
+	overflow: hidden;
+}
+
+/* Tablet */
+@media (max-width: 59.375rem) {
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {
+}
