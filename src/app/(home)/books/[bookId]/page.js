@@ -8,10 +8,12 @@ function bookDetails({ params }) {
 
 	return (
 		<>
-            <div className={styles.divider}/>
+            
             <div className={styles.bookInfoWrapper}>
-			<h1>{book.title}</h1>
-            <h2>{book.subTitle}</h2>
+				<div className={styles.divider}/>
+			<h1 className={styles.bookTitle}>{book.title}</h1>
+            <h2 className={styles.bookSubtitle}>{book.subTitle}</h2>
+			{book.summary && <p className={styles.bookSummary}>{book.summary}</p>}
 			{descriptionArray && descriptionArray.map((paragraph, index) => <p className={styles.paragraph} key={index}>{paragraph}</p>)}
             </div>
 		</>

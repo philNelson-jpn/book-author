@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
+import books from '../../books'
 import style from './BookShelf.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import books from '../../books'
 
 const Books = () => {
 	const [bookIndex, setBookIndex] = React.useState(-1)
@@ -52,9 +52,11 @@ const Books = () => {
 						onClick={() => {
 							if (index === bookIndex) {
 								setBookIndex(-1)
+								
 							} else {
 								setBookIndex(index)
 							}
+							
 						}}
 						style={{
 							border: 'none',
@@ -134,7 +136,6 @@ const Books = () => {
 						<div
 							className={style.box}
 							style={{
-								
 								position: 'relative',
 								flexShrink: 0,
 								overflow: 'hidden',
@@ -176,7 +177,7 @@ const Books = () => {
 							/>
 
 							<Image
-							className={style.coverImage}
+								className={style.coverImage}
 								src={book.coverUrl}
 								alt={book.title}
 								width={width * 5.5}

@@ -1,10 +1,42 @@
 .bookInfoWrapper {
+    --spacing: 16px;
     max-width: 80ch;
     margin-inline: auto;
+    margin-block-start: var(--spacing);
+    font-family: sans-serif;
+}
+
+.divider {
+    height: 2px;
+    background-color: var(--color-gray-300);
+    margin-block-end: var(--spacing);
+    margin-inline-start: calc(var(--spacing) * -1);
+    margin-inline-end: calc(var(--spacing) * -1);
+}
+
+.bookTitle{
+    color: var(--color-gray-900);
+    font-weight: bold;
+}
+
+.bookSubtitle {
+    margin-block-end: var(--spacing);
+    font-size: 1rem;
+}
+
+.bookSummary {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-gray-700);
+    margin-block-end: var(--spacing);
 }
 
 .paragraph {
     margin-block-end: 1rem;
+}
+
+.paragraph:last-of-type{
+    margin-block-end: calc(var(--spacing) * 4);
 }
 
 /* Tablet */

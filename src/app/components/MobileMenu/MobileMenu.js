@@ -202,7 +202,6 @@ const NavLink = styled(Link)`
 	text-decoration: none;
 	color: var(--color-gray-900);
 	font-weight: var(--weight-medium);
-	text-transform: uppercase;
 	font-size: 1.325rem;
 
 	--nav-fade: ${FadeIn} 600ms both, ${SlideIn} 300ms both;

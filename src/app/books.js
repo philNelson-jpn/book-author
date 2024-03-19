@@ -2,7 +2,7 @@ const books = [
 	{
 		id: 'the-last-sword-maker',
 		title: 'The Last Sword Maker',
-		subTitle: 'The Course of Empire Series, Book 1',
+		subTitle: 'The Course of Empire Series - Book 1',
 		summary:
 			'A taut, fast-paced thriller about the coming high-tech arms race between the United States and China',
 		coverUrl: '/lastSwordMakerCover.jpg',
@@ -22,7 +22,8 @@ const books = [
 	{
 		id: 'five-tribes',
 		title: 'Five Tribes',
-		subTitle: 'The Course of Empire Series, Book 2',
+		subTitle: 'The Course of Empire Series - Book 2',
+		summary: 'Countdown to Doomsday',
 		coverUrl: '/fiveTribesCover.jpg',
 		spineBackgroundColor: '#d39d32',
 		spineForegroundColor: '#fff',
@@ -30,7 +31,6 @@ const books = [
 		spineFontFamily: `Copperplate, "DM Sans", sans-serif`,
 		fontSize: '24px',
 		description: [
-			'Countdown to Doomsday',
 			"The year is 2026. The US military has a new weapon in its arsenal: an intelligent life-form so versatile that it can not only create a new generation of weapons but can become a weapon itself -- entering a host's body to manipulate (or kill) them. Admiral James Curtiss is tasked with deploying the new weapons, first in Cuba, then Venezuela, then China. But the news of the military's breakthrough has gotten out and there are menacing forces trying to steal it.",
 			"What's more, a single man has somehow harnessed the new power and has become something more than human -- godlike and seemingly indestructible. He is known only as the Inventor, and he has a warning for humanity: abandon the new technology or the human race will face extinction. It's a countdown to doomsday. But humanity's final fate may be decided in the most unlikely of places: among the primitive tribes of the Kalahari Desert where a top secret military mission has just taken an unexpected turn.",
 		],
@@ -38,7 +38,7 @@ const books = [
 	{
 		id: 'the-great-unmaking',
 		title: 'The Great Unmaking',
-		subTitle: 'The Course of Empire Series, Book 3',
+		subTitle: 'The Course of Empire Series - Book 3',
 		summary:
 			'A propulsive, mind-expanding thriller—and the world-shaking conclusion to the Course of Empire trilogy—about bold scientific dreams turning into nightmares … or perhaps new beginnings …',
 		coverUrl: '/greatUnmakingCover.jpg',

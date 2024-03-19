@@ -48,30 +48,3 @@ const Header = () => {
 }
 
 export default Header
-
-// export default function NavBar() {
-// 	return (
-// 		<nav className={style.navbar}>
-// 			<ol className={style.navlist}>
-// 				<li className={style.navlistItem}>
-// 					<Link href='/'>Home</Link>
-// 				</li>
-// 				<li className={style.navlistItem}>
-// 					<Link href='/books'>Books</Link>
-// 				</li>
-// 				<li className={style.navlistItem}>
-// 					<Link href='/articles'>Articles</Link>
-// 				</li>
-// 				<li className={style.navlistItem}>
-// 					<Link href='/alphonso-mayo-project'>Alphonso Mayo Project</Link>
-// 				</li>
-// 				<li className={style.navlistItem}>
-// 					<Link href='/tutoring'>Tutoring</Link>
-// 				</li>
-// 				<li className={style.navlistItem}>
-// 					<Link href='/about'>About</Link>
-// 				</li>
-// 			</ol>
-// 		</nav>
-// 	)
-// }
